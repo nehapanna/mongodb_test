@@ -1,13 +1,13 @@
-***********Mongo CRUD**************
+Mongo CRUD
 
-*******<<<<<<<<<<<<<<<<<In progress>>>>>>>>>>>>>>>>>*******
+*******In progress*******
 
 
-NodeJS
+| NodeJS
 
-Express
+| Express
 
-MongoDB
+| MongoDB
 
 
 #Credits 
