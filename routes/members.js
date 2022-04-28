@@ -6,7 +6,7 @@ const verifyRoles=require('../middleware/verifyRoles')
 
 router.route('/')
     .get(membersController.getAllMembers)
-    .post(verifyRoles(ROLES_LIST.Admin), membersController.createNewMembers)
+    .post(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor),membersController.createNewMembers)
    . put(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor),membersController.updateMember)
    .delete( verifyRoles(ROLES_LIST.Admin),membersController.deleteMember);
   

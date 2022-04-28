@@ -1,2 +1,4 @@
 20220428	09:00:45	26d0c1eb-a895-47d6-9ce9-1ad6174362c0	Error: ENOENT: no such file or directory, stat 'C:\Users\user\Documents\mongodb_crud\views\404.html'
 20220428	11:04:37	b9a8dc8c-1452-4ef8-bc88-f29514b485ab	Error: ENOENT: no such file or directory, stat 'C:\Users\user\Documents\mongodb_crud\views\404.html'
+20220428	12:53:52	8898634f-346f-49a3-8816-dede17694108	TypeError: Cannot read property 'map' of undefined
+20220428	12:57:05	b6432bca-6c6f-47bc-b192-7293f74e9c15	TypeError: Cannot read property 'map' of undefined

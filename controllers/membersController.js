@@ -10,33 +10,19 @@ const getAllMembers = async(req, res) => {
 }
 
 
-const getMember  = async(req, res) => {
-    console.log("**********",req)
-    //if(!req?.params?.id){
-        if(!req.paramas.id){
-        return res.status(400).json({'message':'Id is required'})
-    }
-    
-     const member=await Member.findOne({_id:req.params.id}).exec();
-    if(!member)
-        return res.status(204).json({'message':'Id does not exist'});
-    res.json(member);
- 
- }
-
 
 const createNewMembers= async(req, res) => {
-  
-    //if(!req?.body?.firstname||!req?.body?.lastname)
-    if(!req)
+  console.log("inside create new member function");
+  console.log(req.body)
+    if(!req.body.firstname||!req.body.lastname)
         return res.status(400).json({'message':'Firstname and lastname are required'})
     
 try{
-const result=await Member.create({
+    const result=await Member.create({
     firstname:req.body.firstname,
     lastname:req.body.lastname
 
-});
+    });
 res.status(201).json(result);
 }
 catch(err){
@@ -45,8 +31,8 @@ catch(err){
 }
 
 const updateMember  = async(req, res) => {
-   //if(!req?.body?.id){
-    if(!reqs){
+   
+    if(!req.body.id){
        return res.status(400).json({'message':'Id is required'})
    }
    
@@ -54,9 +40,9 @@ const updateMember  = async(req, res) => {
    if(!member)
    return res.status(204).json({'message':'Id does not exist'});
 
-  // if(req.body?.firstname) 
+  if(req.body.firstname) 
    member.firstname=req.body.firstname;
-   //if(req.body?.lastname) 
+    if(req.body.lastname) 
    member.lastname=req.body.lastname;
    const result=await member.save()
    res.json(result)
@@ -77,7 +63,19 @@ if(!member)
 }
 
 
-
+const getMember  = async(req, res) => {
+    console.log("**********",req)
+    //if(!req?.params?.id){
+        if(!req.paramas.id){
+        return res.status(400).json({'message':'Id is required'})
+    }
+    
+     const member=await Member.findOne({_id:req.params.id}).exec();
+    if(!member)
+        return res.status(204).json({'message':'Id does not exist'});
+    res.json(member);
+ 
+ }
 module.exports = {
     getAllMembers,
     createNewMembers,
