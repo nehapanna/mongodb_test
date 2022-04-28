@@ -1,6 +1,7 @@
-Mongo CRUD
+**Mongo CRUD**
 
-*******In progress*******
+************This project is implemented for CRUD operations.************
+The operations are authorized amongst admin, editor and member
 
 
 | NodeJS
@@ -16,4 +17,4 @@ https://nodejs.org/
 
 Complete Node JS Developer Course-Andrew Mead
 
-Node JS tutorial-Dave Grey
+Node JS tutorial-Dave Gray
