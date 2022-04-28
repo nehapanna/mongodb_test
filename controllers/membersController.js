@@ -13,7 +13,7 @@ const getAllMembers = async(req, res) => {
 const getMember  = async(req, res) => {
     console.log("**********",req)
     //if(!req?.params?.id){
-        if(!req){
+        if(!req.paramas.id){
         return res.status(400).json({'message':'Id is required'})
     }
     

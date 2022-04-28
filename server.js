@@ -35,7 +35,7 @@ app.use('/refresh', require('./routes/refresh'));
 app.use('/logout', require('./routes/logout'));
 
 app.use(verifyJWT);
-app.use('/members', require('./routes/members'));
+app.use('/allmembers', require('./routes/members'));
 
 app.all('*', (req, res) => {
     res.status(404);
