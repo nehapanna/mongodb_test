@@ -1,8 +1,6 @@
 **Mongo CRUD**
 
-************This project is implemented for CRUD operations.************
-The operations are authorized amongst admin, editor and member
-
+************This project is designed to perform CRUD operations with role-based access control for Admins, Editors, and Members************
 
 | NodeJS
 
